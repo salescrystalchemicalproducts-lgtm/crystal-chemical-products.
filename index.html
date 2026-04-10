@@ -6,7 +6,7 @@
   <title>Crystal Chemical Products</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-slate-800 scroll-smooth">
+<body class="bg-slate-50 text-slate-800 scroll-smooth">
 
   <!-- Floating WhatsApp Button -->
   <a
@@ -39,7 +39,7 @@
   </div>
 
   <!-- Header -->
-  <header class="sticky top-0 z-40 bg-sky-100/95 backdrop-blur border-b-4 border-red-600 shadow-sm">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b-4 border-red-600 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
       <div class="flex items-center gap-4">
         <div class="bg-white rounded-2xl p-2 shadow-sm border border-sky-200">
@@ -60,7 +60,7 @@
   </header>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-sky-50 via-white to-sky-100">
+  <section class="relative overflow-hidden bg-gradient-to-br from-sky-50 via-white to-slate-100">
     <div class="max-w-7xl mx-auto px-6 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <span class="inline-block px-4 py-1.5 rounded-full bg-red-100 text-red-700 font-semibold text-sm mb-5">
@@ -73,28 +73,45 @@
           Crystal Chemical Products is a trusted Ugandan manufacturer of Makula cleaning products, serving homes, schools, offices, hotels, supermarkets, and institutions with reliable cleaning and hygiene solutions since 1997.
         </p>
 
+        <div class="mt-8 flex flex-wrap gap-3">
+          <span class="px-4 py-2 rounded-full bg-white border border-sky-200 text-sky-950 font-medium shadow-sm">Retail & Bulk Orders</span>
+          <span class="px-4 py-2 rounded-full bg-white border border-sky-200 text-sky-950 font-medium shadow-sm">Fast Delivery</span>
+          <span class="px-4 py-2 rounded-full bg-white border border-sky-200 text-sky-950 font-medium shadow-sm">Customer Guarantee</span>
+          <span class="px-4 py-2 rounded-full bg-white border border-sky-200 text-sky-950 font-medium shadow-sm">Trusted by Schools, Offices & Homes</span>
+        </div>
+
         <div class="mt-10 grid sm:grid-cols-3 gap-4">
           <div class="bg-white rounded-2xl p-4 border border-sky-200 shadow-sm">
-            <p class="text-sky-950 font-bold text-lg">1997</p>
-            <p class="text-sm text-slate-600">Founded</p>
-          </div>
-          <div class="bg-white rounded-2xl p-4 border border-sky-200 shadow-sm">
             <p class="text-sky-950 font-bold text-lg">Retail & Bulk</p>
-            <p class="text-sm text-slate-600">Orders Available</p>
+            <p class="text-sm text-slate-600">Flexible supply options</p>
           </div>
           <div class="bg-white rounded-2xl p-4 border border-sky-200 shadow-sm">
-            <p class="text-sky-950 font-bold text-lg">Uganda</p>
-            <p class="text-sm text-slate-600">Trusted Local Brand</p>
+            <p class="text-sky-950 font-bold text-lg">Fast Delivery</p>
+            <p class="text-sm text-slate-600">Timely fulfilment</p>
+          </div>
+          <div class="bg-white rounded-2xl p-4 border border-sky-200 shadow-sm">
+            <p class="text-sky-950 font-bold text-lg">Quality Assured</p>
+            <p class="text-sm text-slate-600">Dependable results</p>
           </div>
         </div>
       </div>
 
+      <!-- Product-focused visual instead of generic cleaning image -->
       <div class="bg-white rounded-3xl p-5 border-2 border-sky-200 shadow-xl">
-        <img
-          src="https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=1200&q=80"
-          alt="Cleaning products and packaging display"
-          class="w-full h-[420px] object-cover rounded-2xl bg-slate-50"
-        />
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-slate-50 rounded-2xl p-3 border border-slate-200 flex items-center justify-center h-52">
+            <img src="liquid-cleaner.jpeg" alt="Makula Liquid Cleaner" class="max-w-full max-h-full object-contain" />
+          </div>
+          <div class="bg-slate-50 rounded-2xl p-3 border border-slate-200 flex items-center justify-center h-52">
+            <img src="white-emulsion-perfumed.jpg" alt="Makula White Emulsion Disinfectant" class="max-w-full max-h-full object-contain" />
+          </div>
+          <div class="bg-slate-50 rounded-2xl p-3 border border-slate-200 flex items-center justify-center h-52">
+            <img src="bleach-white.jpg" alt="Makula Bleach 1" class="max-w-full max-h-full object-contain" />
+          </div>
+          <div class="bg-slate-50 rounded-2xl p-3 border border-slate-200 flex items-center justify-center h-52">
+            <img src="hand-sanitizer.jpg" alt="Makula Hand Sanitizer" class="max-w-full max-h-full object-contain" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -154,12 +171,13 @@
 
       <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <!-- Card -->
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
             <img src="bio-pit.jpg" alt="Makula Bio Pit" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Makula Bio Pit</h4>
             <p class="text-slate-600 mt-3 leading-8">A specialized product designed to support the breakdown of waste in pit latrines and waste systems. It helps reduce bad odor and improves sanitation.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Helps maintain a cleaner and more manageable sanitation environment.</p>
@@ -172,12 +190,12 @@
           </div>
         </div>
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
             <img src="dog-shampoo.jpg" alt="Makula Medicated Dog Shampoo" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Makula Medicated Dog Shampoo</h4>
             <p class="text-slate-600 mt-3 leading-8">A medicated shampoo made to clean dogs thoroughly while helping maintain hygiene and coat freshness.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Keeps pets clean, fresh, and well cared for.</p>
@@ -190,12 +208,12 @@
           </div>
         </div>
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
             <img src="scouring-powder.jpg" alt="Makula Scouring Powder" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Makula Scouring Powder</h4>
             <p class="text-slate-600 mt-3 leading-8">A powerful cleaning powder used for scrubbing kitchen surfaces, sinks, utensils, bathrooms, and other hard surfaces.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Tough on dirt and stains, leaving surfaces clean and fresh.</p>
@@ -208,12 +226,12 @@
           </div>
         </div>
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
             <img src="white-emulsion-perfumed.jpg" alt="Makula White Emulsion Disinfectant Perfumed" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Makula White Emulsion Disinfectant (Perfumed)</h4>
             <p class="text-slate-600 mt-3 leading-8">A perfumed disinfectant suitable for cleaning and disinfecting floors, both flush and pit latrine toilets, bathrooms, drains, and surfaces. Suitably used for flush toilets.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Kills germs effectively while leaving a fresh pleasant fragrance.</p>
@@ -228,12 +246,12 @@
           </div>
         </div>
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="white-emulsion-non-perfumed.jpg" alt="Makula Disinfectant Non Perfumed" class="max-w-full max-h-full object-contain" />
+            <img src="white-emulsion-non-perfumed.jpg" alt="Makula White Emulsion Disinfectant Non-Perfumed" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Makula White Emulsion Disinfectant (Non-Perfumed)</h4>
             <p class="text-slate-600 mt-3 leading-8">A non-perfumed disinfectant ideal for environments where fragrance-free sanitation is preferred. Suitably used in pit latrines.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Strong hygiene protection without added scent.</p>
@@ -248,12 +266,12 @@
           </div>
         </div>
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
             <img src="liquid-cleaner.jpeg" alt="Makula Liquid Cleaner" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Makula Liquid Cleaner</h4>
             <p class="text-slate-600 mt-3 leading-8">A versatile liquid cleaning product for general use on floors, tiles, walls, bathrooms, kitchens, and workspaces.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Reliable for everyday cleaning in homes, offices, and institutions.</p>
@@ -268,12 +286,12 @@
           </div>
         </div>
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
             <img src="bleach-white.jpg" alt="Makula Bleach 1 White Clothes" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Makula Bleach 1 (White Clothes)</h4>
             <p class="text-slate-600 mt-3 leading-8">A bleach specially intended for whitening white fabrics and removing stains.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Keeps white clothes brighter and cleaner.</p>
@@ -290,12 +308,12 @@
           </div>
         </div>
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
             <img src="bleach-coloured.jpg" alt="Makula Bleach 2 Coloured Clothes" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Makula Bleach 2 (Coloured Clothes)</h4>
             <p class="text-slate-600 mt-3 leading-8">A bleach designed for coloured clothes with attention to fabric care.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Cleans effectively while helping preserve colour.</p>
@@ -312,12 +330,12 @@
           </div>
         </div>
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
             <img src="bar-soap.jpg" alt="Makula Bar Soap" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Makula Bar Soap</h4>
             <p class="text-slate-600 mt-3 leading-8">A general-purpose cleaning soap for household and washing use.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Affordable and reliable for everyday cleaning needs.</p>
@@ -330,12 +348,12 @@
           </div>
         </div>
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
             <img src="hand-sanitizer.jpg" alt="Makula Hand Sanitizer" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Makula Hand Sanitizer</h4>
             <p class="text-slate-600 mt-3 leading-8">A hygiene product for hand cleansing and germ protection.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Promotes cleanliness when soap and water are not available.</p>
@@ -349,12 +367,12 @@
           </div>
         </div>
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
             <img src="terramic-striper.jpg" alt="Makula Terramic Double Action Formula Striper" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Makula Terramic Double Action Formula Striper</h4>
             <p class="text-slate-600 mt-3 leading-8">A strong cleaning product formulated for deep cleaning and removing tough dirt.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Ideal for heavy-duty cleaning tasks.</p>
@@ -369,12 +387,12 @@
           </div>
         </div>
 
-        <div class="relative bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition">
-          <span class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
+        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+          <span class="absolute top-4 left-4 z-10 bg-sky-950 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
           <div class="h-72 bg-white p-4 flex items-center justify-center">
             <img src="rat-poison.jpg" alt="Rat Poison" class="max-w-full max-h-full object-contain" />
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h4 class="font-bold text-2xl text-sky-950">Rat Poison</h4>
             <p class="text-slate-600 mt-3 leading-8">A pest control product used to manage and control rats.</p>
             <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Helps maintain a safe and hygienic environment.</p>
@@ -398,6 +416,7 @@
         <h3 class="text-3xl md:text-4xl font-extrabold text-sky-950">Customers We Serve</h3>
         <p class="text-slate-600 mt-3">We supply institutions across various sectors such as:</p>
       </div>
+
       <div class="grid md:grid-cols-3 gap-5">
         <div class="bg-sky-50 border border-sky-200 rounded-2xl p-6 shadow-sm text-center">
           <div class="text-4xl mb-3">🏫</div>
@@ -423,6 +442,13 @@
           <div class="text-4xl mb-3">📦</div>
           <p class="font-semibold text-sky-950 text-lg">Retail Shops and Distributors</p>
         </div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <span class="px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-slate-700 font-medium">Trusted by Schools</span>
+        <span class="px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-slate-700 font-medium">Trusted by Hospitals</span>
+        <span class="px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-slate-700 font-medium">Trusted by Offices</span>
+        <span class="px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-slate-700 font-medium">Trusted by Supermarkets</span>
       </div>
     </div>
   </section>
@@ -480,6 +506,19 @@
             <p><strong>Call:</strong> 0701 502433 / 0775 708891</p>
             <p><strong>Email:</strong> sales.crystalchemicalproducts@gmail.com</p>
             <p><strong>Address:</strong> Salaama Road Plot No. 86 Block 263, Luwafu, Nakinyuguzi, Makindye Kampala, Uganda.</p>
+          </div>
+        </div>
+
+        <div class="bg-white text-slate-800 rounded-3xl p-6 shadow-xl border border-sky-200">
+          <h4 class="text-sky-950 font-bold text-2xl mb-3">Let’s Supply Your Business</h4>
+          <p class="text-slate-600 leading-7">
+            We supply cleaning products for schools, offices, hospitals, hotels, hostels, supermarkets, shops, and distributors.
+          </p>
+          <div class="mt-5 grid sm:grid-cols-2 gap-3">
+            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700">Order on WhatsApp</a>
+            <a href="mailto:sales.crystalchemicalproducts@gmail.com?subject=Request%20for%20Quotation" class="text-center px-5 py-3 rounded-2xl bg-red-600 text-white font-semibold shadow hover:bg-red-700">Email for Quote</a>
+            <a href="tel:+256701502433" class="text-center px-5 py-3 rounded-2xl border-2 border-sky-900 text-sky-950 font-semibold">Call 0701 502433</a>
+            <a href="tel:+256775708891" class="text-center px-5 py-3 rounded-2xl border-2 border-sky-900 text-sky-950 font-semibold">Call 0775 708891</a>
           </div>
         </div>
       </div>
