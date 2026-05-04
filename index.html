@@ -1,525 +1,337 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crystal Chemical Products</title>
+  <title>Crystal Chemical Products | Makula Cleaning Products Uganda</title>
+  <meta name="description" content="Crystal Chemical Products manufactures Makula cleaning products in Uganda: disinfectants, liquid cleaner, bleach, bar soap, scouring powder, hand sanitizer, pet shampoo and sanitation solutions." />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#072554',
+              blue: '#0F4C81',
+              gold: '#F5C542',
+              green: '#138A43',
+              ink: '#132238'
+            }
+          },
+          boxShadow: {
+            soft: '0 18px 60px rgba(7, 37, 84, 0.12)',
+            glow: '0 24px 80px rgba(15, 76, 129, 0.22)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass { background: rgba(255,255,255,.82); backdrop-filter: blur(16px); }
+    .hero-pattern {
+      background:
+        radial-gradient(circle at 10% 20%, rgba(245,197,66,.22), transparent 28%),
+        radial-gradient(circle at 90% 0%, rgba(19,138,67,.14), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #f4f8fb 45%, #eaf3f8 100%);
+    }
+    .premium-card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+    .premium-card:hover { transform: translateY(-6px); box-shadow: 0 24px 70px rgba(7,37,84,.14); border-color: rgba(15,76,129,.35); }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 scroll-smooth">
+<body class="bg-slate-50 text-brand-ink antialiased">
 
-  <!-- Floating WhatsApp Button -->
-  <a
-    href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20place%20an%20order."
-    target="_blank"
-    class="fixed bottom-5 right-5 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-full shadow-xl font-semibold z-50 transition"
-  >
-    Order on WhatsApp
-  </a>
+  <!-- Floating actions -->
+  <div class="fixed bottom-5 left-4 right-4 z-50 flex items-center justify-between gap-3 pointer-events-none">
+    <a href="tel:+256701502433" class="pointer-events-auto inline-flex items-center gap-2 rounded-full bg-brand-navy px-5 py-3 text-sm font-bold text-white shadow-soft hover:bg-brand-blue transition">Call Us</a>
+    <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="pointer-events-auto inline-flex items-center gap-2 rounded-full bg-brand-green px-5 py-3 text-sm font-bold text-white shadow-soft hover:brightness-110 transition">Order on WhatsApp</a>
+  </div>
 
-  <!-- Floating Call Button -->
-  <a
-    href="tel:+256701502433"
-    class="fixed bottom-5 left-5 bg-sky-950 hover:bg-sky-900 text-white px-5 py-3 rounded-full shadow-xl font-semibold z-50 transition"
-  >
-    Call Us
-  </a>
-
-  <!-- Top Bar -->
-  <div class="bg-sky-950 text-white text-sm">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-      <div class="flex flex-wrap gap-4">
-        <span><strong>Call:</strong> 0701 502433 / 0775 708891</span>
-        <span><strong>WhatsApp:</strong> 0772 502433</span>
-      </div>
-      <div>
-        <span><strong>Email:</strong> sales.crystalchemicalproducts@gmail.com</span>
+  <!-- Top bar -->
+  <div class="bg-brand-navy text-white text-sm">
+    <div class="mx-auto max-w-7xl px-5 py-3 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+      <p class="font-medium">Ugandan manufacturer of Makula cleaning, hygiene and sanitation products</p>
+      <div class="flex flex-wrap gap-x-5 gap-y-1 text-white/90">
+        <span>Call: 0701 502433 / 0775 708891</span>
+        <span>WhatsApp: 0772 502433</span>
+        <span>Email: sales.crystalchemicalproducts@gmail.com</span>
       </div>
     </div>
   </div>
 
   <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b-4 border-sky-950 shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-      <div class="flex items-center gap-4">
-        <div class="bg-white rounded-2xl p-2 shadow-sm border border-sky-200">
-          <img src="logo.jpeg" alt="Crystal Chemical Products logo" class="w-20 h-20 object-contain" />
-        </div>
+  <header class="sticky top-0 z-40 border-b border-white/60 bg-white/90 backdrop-blur-xl shadow-sm">
+    <div class="mx-auto max-w-7xl px-5 py-4 flex items-center justify-between gap-5">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="logo.jpeg" alt="Crystal Chemical Products logo" class="h-14 w-14 rounded-2xl object-contain ring-1 ring-slate-200 bg-white p-1" />
         <div>
-          <h1 class="text-2xl md:text-3xl font-extrabold text-sky-950 leading-tight">Crystal Chemical Products</h1>
-          <p class="text-slate-600 text-sm md:text-base">Manufacturers of Makula Cleaning Products</p>
-          <p class="text-green-700 font-semibold">Best Quality Cleaning Products You Can Trust</p>
+          <p class="text-lg md:text-2xl font-black tracking-tight text-brand-navy">Crystal Chemical Products</p>
+          <p class="hidden sm:block text-sm font-semibold text-brand-green">Your True Partners in Sanitation</p>
         </div>
-      </div>
-
-      <div class="flex flex-wrap gap-3">
-        <a href="#products" class="px-5 py-2.5 rounded-xl bg-white border-2 border-sky-200 text-sky-950 font-semibold shadow-sm hover:bg-slate-50">View Products</a>
-        <a href="mailto:sales.crystalchemicalproducts@gmail.com?subject=Request%20for%20Quotation" class="px-5 py-2.5 rounded-xl bg-green-600 text-white font-semibold shadow-sm hover:bg-green-700">Email for Quote</a>
-      </div>
+      </a>
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-bold text-slate-700">
+        <a href="#products" class="hover:text-brand-blue">Products</a>
+        <a href="#about" class="hover:text-brand-blue">About</a>
+        <a href="#industries" class="hover:text-brand-blue">Customers</a>
+        <a href="#recognition" class="hover:text-brand-blue">Recognition</a>
+        <a href="#contact" class="hover:text-brand-blue">Contact</a>
+      </nav>
+      <a href="#products" class="rounded-full bg-brand-navy px-5 py-3 text-sm font-bold text-white shadow-soft hover:bg-brand-blue transition">Shop Products</a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-sky-50">
-    <div class="max-w-7xl mx-auto px-6 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
+  <section id="home" class="hero-pattern overflow-hidden">
+    <div class="mx-auto max-w-7xl px-5 py-16 lg:py-24 grid lg:grid-cols-[1.05fr_.95fr] gap-12 items-center">
       <div>
-        <span class="inline-block px-4 py-1.5 rounded-full bg-sky-100 text-sky-950 font-semibold text-sm mb-5">
-          Trusted Since 1997
-        </span>
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-sky-950 leading-tight tracking-tight">
-          Best Quality Cleaning Products You Can Trust
-        </h2>
-        <p class="mt-6 text-lg text-slate-600 leading-8 max-w-2xl">
-          Crystal Chemical Products is a trusted Ugandan manufacturer of Makula cleaning products, serving homes, schools, offices, hotels, supermarkets, and institutions with reliable cleaning and hygiene solutions since 1997.
+        <div class="inline-flex items-center gap-2 rounded-full border border-brand-blue/20 bg-white px-4 py-2 text-sm font-bold text-brand-blue shadow-sm">
+          Trusted Ugandan manufacturer since 1997
+        </div>
+        <h1 class="mt-6 text-4xl md:text-6xl lg:text-7xl font-black leading-[1.02] tracking-tight text-brand-navy">
+          Premium Cleaning Products for Homes, Businesses & Institutions
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          Crystal Chemical Products manufactures the Makula range of dependable cleaning, disinfecting, hygiene, laundry, pet care and sanitation solutions for everyday and bulk use.
         </p>
-
-        <!-- Niche / trust line -->
-        <div class="mt-8 flex flex-wrap gap-3">
-          <span class="px-4 py-2 rounded-full bg-white border border-sky-200 text-sky-950 font-medium shadow-sm">Trusted by Schools</span>
-          <span class="px-4 py-2 rounded-full bg-white border border-sky-200 text-sky-950 font-medium shadow-sm">Safe and Effective</span>
-          <span class="px-4 py-2 rounded-full bg-white border border-sky-200 text-sky-950 font-medium shadow-sm">Affordable Prices</span>
-          <span class="px-4 py-2 rounded-full bg-white border border-sky-200 text-sky-950 font-medium shadow-sm">Fast Delivery</span>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#products" class="rounded-2xl bg-brand-green px-7 py-4 text-center font-black text-white shadow-soft hover:brightness-110 transition">Explore Products</a>
+          <a href="mailto:sales.crystalchemicalproducts@gmail.com?subject=Request%20for%20Quotation" class="rounded-2xl bg-white px-7 py-4 text-center font-black text-brand-navy ring-1 ring-slate-200 shadow-sm hover:ring-brand-blue/40 transition">Request a Quote</a>
         </div>
-
-        <!-- Single stats row -->
-        <div class="mt-10 grid sm:grid-cols-3 gap-4">
-          <div class="bg-white rounded-2xl p-4 border border-sky-200 shadow-sm">
-            <p class="text-sky-950 font-bold text-lg">Retail & Bulk</p>
-            <p class="text-sm text-slate-600">Flexible supply options</p>
+        <div class="mt-10 grid grid-cols-3 gap-3 max-w-xl">
+          <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200 shadow-sm">
+            <p class="text-2xl font-black text-brand-navy">10+</p>
+            <p class="text-xs font-bold text-slate-500">Product lines</p>
           </div>
-          <div class="bg-white rounded-2xl p-4 border border-sky-200 shadow-sm">
-            <p class="text-sky-950 font-bold text-lg">Fast Delivery</p>
-            <p class="text-sm text-slate-600">Timely fulfilment</p>
+          <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200 shadow-sm">
+            <p class="text-2xl font-black text-brand-navy">Bulk</p>
+            <p class="text-xs font-bold text-slate-500">Supply ready</p>
           </div>
-          <div class="bg-white rounded-2xl p-4 border border-sky-200 shadow-sm">
-            <p class="text-sky-950 font-bold text-lg">Quality Assured</p>
-            <p class="text-sm text-slate-600">Dependable results</p>
+          <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200 shadow-sm">
+            <p class="text-2xl font-black text-brand-navy">UG</p>
+            <p class="text-xs font-bold text-slate-500">Made locally</p>
           </div>
         </div>
       </div>
-
-      <!-- Real product visual -->
-      <div class="bg-white rounded-3xl p-5 border-2 border-sky-200 shadow-xl">
-        <div class="grid grid-cols-2 gap-4">
-          <div class="h-52 bg-slate-50 rounded-2xl border border-slate-200 p-3 flex items-center justify-center">
-            <img src="liquid-cleaner.jpeg" alt="Makula Liquid Cleaner" class="max-w-full max-h-full object-contain" />
-          </div>
-          <div class="h-52 bg-slate-50 rounded-2xl border border-slate-200 p-3 flex items-center justify-center">
-            <img src="white-emulsion-perfumed.jpeg" alt="Makula White Emulsion Disinfectant" class="max-w-full max-h-full object-contain" />
-          </div>
-          <div class="h-52 bg-slate-50 rounded-2xl border border-slate-200 p-3 flex items-center justify-center">
-            <img src="bleach-white.jpeg" alt="Makula Bleach" class="max-w-full max-h-full object-contain" />
-          </div>
-          <div class="h-52 bg-slate-50 rounded-2xl border border-slate-200 p-3 flex items-center justify-center">
-            <img src="hand-sanitizer.jpeg" alt="Makula Hand Sanitizer" class="max-w-full max-h-full object-contain" />
-          </div>
+      <div class="relative">
+        <div class="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-brand-gold/30 via-brand-blue/10 to-brand-green/20 blur-2xl"></div>
+        <div class="relative rounded-[2rem] bg-white p-4 shadow-glow ring-1 ring-slate-200">
+          <img src="company-products.jpeg" alt="Makula product range by Crystal Chemical Products" class="h-[420px] w-full rounded-[1.5rem] object-contain bg-slate-50" onerror="this.src='liquid-cleaner.jpeg'" />
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Trust strip -->
+  <section class="bg-brand-navy text-white">
+    <div class="mx-auto max-w-7xl px-5 py-5 grid gap-4 md:grid-cols-4 text-center">
+      <p class="font-bold">Retail & Wholesale Orders</p>
+      <p class="font-bold">Institutional Supply</p>
+      <p class="font-bold">Fast Local Delivery</p>
+      <p class="font-bold">Quality You Can Trust</p>
     </div>
   </section>
 
   <!-- About -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
+  <section id="about" class="py-20 bg-white">
+    <div class="mx-auto max-w-7xl px-5 grid lg:grid-cols-[.9fr_1.1fr] gap-12 items-start">
       <div>
-        <h3 class="text-3xl md:text-4xl font-extrabold text-sky-950 mb-6 tracking-tight">About Crystal Chemical Products</h3>
-        <div class="space-y-4 text-slate-600 leading-8">
-          <p>
-            Crystal Chemical Products was founded in 1997 as a small-scale industry by the Late Director,
-            <strong>Mr. Sam Mutebi</strong>, specializing in manufacturing cleaning detergents under the
-            <strong>Makula Brand</strong>.
-          </p>
-          <p>
-            We are located along <strong>Salaama Road, Plot No. 86, Block 263, Luwafu, Nakinyuguzi, Makindye, Kampala, Uganda</strong>.
-          </p>
-          <p>
-            Makula Cleaning products are among the best products available locally. We are dedicated to producing the best products on the market today. Each product is developed to high quality standards.
-          </p>
-          <p>
-            We combine the latest product science and technology with carefully selected ingredients to produce products that are superior in quality, dependable in performance, and suitable for both home and commercial use.
-          </p>
-          <p>
-            Crystal Chemical Products offers customer guarantee, no questions asked.
-          </p>
-        </div>
+        <p class="text-sm font-black uppercase tracking-[.25em] text-brand-green">About us</p>
+        <h2 class="mt-3 text-3xl md:text-5xl font-black tracking-tight text-brand-navy">Built on local manufacturing, quality and dependable service.</h2>
       </div>
-
-      <div class="grid md:grid-cols-2 gap-4">
-        <div class="bg-slate-50 border-2 border-sky-200 rounded-2xl p-6 shadow-sm">
-          <h4 class="font-bold text-sky-950">10+ Product Lines</h4>
-          <p class="text-slate-600 mt-2">Serving households, institutions, and distributors.</p>
-        </div>
-        <div class="bg-slate-50 border-2 border-sky-200 rounded-2xl p-6 shadow-sm">
-          <h4 class="font-bold text-sky-950">6 Key Sectors</h4>
-          <p class="text-slate-600 mt-2">Schools, hospitals, offices, hotels, shops, and supermarkets.</p>
-        </div>
-        <div class="bg-slate-50 border-2 border-sky-200 rounded-2xl p-6 shadow-sm">
-          <h4 class="font-bold text-sky-950">Retail & Bulk Sales</h4>
-          <p class="text-slate-600 mt-2">Flexible order sizes to support both individual and business customers.</p>
-        </div>
-        <div class="bg-slate-50 border-2 border-sky-200 rounded-2xl p-6 shadow-sm">
-          <h4 class="font-bold text-sky-950">Fast Moving Essentials</h4>
-          <p class="text-slate-600 mt-2">Liquid cleaner, disinfectants, bleach, and sanitizer remain core sales drivers.</p>
-        </div>
-        <div class="md:col-span-2 bg-green-50 border-2 border-green-200 rounded-2xl p-6 shadow-sm">
-          <h4 class="font-bold text-sky-950">Goal</h4>
-          <p class="text-slate-600 mt-2">
-            Our goal is to become Uganda’s most trusted household and industrial cleaning products brand by consistently delivering quality, affordability, and dependable service.
-          </p>
+      <div class="grid gap-5 text-slate-600 leading-8">
+        <p>Crystal Chemical Products was founded in 1997 as a small-scale industry by the Late Director, <strong>Mr. Sam Mutebi</strong>, manufacturing cleaning detergents under the trusted <strong>Makula Brand</strong>.</p>
+        <p>We serve homes, schools, hotels, offices, supermarkets, health facilities, retail shops and distributors with products designed for everyday cleaning and professional hygiene needs.</p>
+        <p>Our goal is to become Uganda’s most trusted household and industrial cleaning products brand through consistent quality, affordability and reliable customer support.</p>
+        <div class="grid sm:grid-cols-2 gap-4 pt-2">
+          <div class="rounded-3xl bg-slate-50 p-6 ring-1 ring-slate-200"><strong class="text-brand-navy">Location</strong><br/>Salaama Road, Plot 86, Block 263, Luwafu, Makindye, Kampala</div>
+          <div class="rounded-3xl bg-slate-50 p-6 ring-1 ring-slate-200"><strong class="text-brand-navy">Orders</strong><br/>Retail, wholesale and institutional supply available</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Products -->
-  <section id="products" class="py-16 bg-slate-50 border-y border-sky-100">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <h3 class="text-3xl md:text-4xl font-extrabold text-sky-950 tracking-tight">Our Products</h3>
-        <p class="text-slate-600 mt-3">We take both retail and bulk orders. Prices may vary slightly based on quantity and delivery location.</p>
+  <!-- Product Categories -->
+  <section id="products" class="py-20 bg-slate-50">
+    <div class="mx-auto max-w-7xl px-5">
+      <div class="max-w-3xl">
+        <p class="text-sm font-black uppercase tracking-[.25em] text-brand-green">Product range</p>
+        <h2 class="mt-3 text-3xl md:text-5xl font-black tracking-tight text-brand-navy">Professional Makula products for every cleaning need.</h2>
+        <p class="mt-4 text-lg leading-8 text-slate-600">Choose from disinfectants, cleaners, laundry care, sanitation solutions, pet care, soap and pest control products. Contact us for current prices and bulk supply terms.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="bio-pit.jpeg" alt="Makula Bio Pit" class="w-full h-full object-contain" />
-          </div>
+      <div class="mt-12 grid md:grid-cols-2 xl:grid-cols-3 gap-7">
+        <!-- Product card template -->
+        <article class="premium-card rounded-[2rem] bg-white ring-1 ring-slate-200 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-72 bg-gradient-to-br from-white to-slate-100 p-5 flex items-center justify-center"><img src="liquid-cleaner.jpeg" alt="Makula Liquid Cleaner" class="max-h-full max-w-full object-contain" /></div>
           <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Makula Bio Pit</h4>
-            <p class="text-slate-600 mt-3 leading-8">A specialized product designed to support the breakdown of waste in pit latrines and waste systems. It helps reduce bad odor and improves sanitation.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Helps maintain a cleaner and more manageable sanitation environment.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">UGX 30,000</p>
-              <p class="mt-2">1L pack</p>
-              <p class="mt-2 text-green-700 font-semibold">Bulk orders available</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Bio%20Pit." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
+            <div class="flex items-start justify-between gap-3"><h3 class="text-2xl font-black text-brand-navy">Makula Liquid Cleaner</h3><span class="rounded-full bg-brand-gold/20 px-3 py-1 text-xs font-black text-brand-navy">Multi-purpose</span></div>
+            <p class="mt-3 leading-7 text-slate-600">A versatile everyday cleaner for floors, tiles, walls, bathrooms, kitchens, windows and workspaces.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600"><li>• Available in 100ml, 5L, 10L and 20L</li><li>• Suitable for homes, offices and institutions</li><li>• Perfumed and un-perfumed options</li></ul>
+            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Liquid%20Cleaner." target="_blank" class="mt-6 rounded-2xl bg-brand-green px-5 py-3 text-center font-black text-white hover:brightness-110 transition">Order on WhatsApp</a>
           </div>
-        </div>
+        </article>
 
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="dog-shampoo.jpeg" alt="Makula Super Medicated Dog Shampoo" class="w-full h-full object-contain" />
-          </div>
+        <article class="premium-card rounded-[2rem] bg-white ring-1 ring-slate-200 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-72 bg-gradient-to-br from-white to-slate-100 p-5 flex items-center justify-center"><img src="white-emulsion-perfumed.jpeg" alt="Makula White Emulsion Disinfectant" class="max-h-full max-w-full object-contain" /></div>
           <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Makula Super Medicated Dog Shampoo</h4>
-            <p class="text-slate-600 mt-3 leading-8">A medicated shampoo made to clean dogs thoroughly while helping maintain hygiene and coat freshness.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Keeps pets clean, fresh, and well cared for.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">UGX 20,000</p>
-              <p class="mt-2">500ml</p>
-              <p class="mt-2 text-green-700 font-semibold">Bulk orders available</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Medicated%20Dog%20Shampoo." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
+            <div class="flex items-start justify-between gap-3"><h3 class="text-2xl font-black text-brand-navy">White Emulsion Disinfectant</h3><span class="rounded-full bg-brand-blue/10 px-3 py-1 text-xs font-black text-brand-blue">Sanitation</span></div>
+            <p class="mt-3 leading-7 text-slate-600">A dependable disinfectant for floors, bathrooms, drains, flush toilets, pit latrines and sanitation systems.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600"><li>• Available in 5L, 10L and 20L</li><li>• Perfumed and non-perfumed options</li><li>• Ideal for institutions and public facilities</li></ul>
+            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20White%20Emulsion%20Disinfectant." target="_blank" class="mt-6 rounded-2xl bg-brand-green px-5 py-3 text-center font-black text-white hover:brightness-110 transition">Order on WhatsApp</a>
           </div>
-        </div>
+        </article>
 
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="scouring-powder.jpeg" alt="Makula Scouring Powder" class="w-full h-full object-contain" />
-          </div>
+        <article class="premium-card rounded-[2rem] bg-white ring-1 ring-slate-200 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-72 bg-gradient-to-br from-white to-slate-100 p-5 flex items-center justify-center"><img src="bleach-white.jpeg" alt="Makula Bleach" class="max-h-full max-w-full object-contain" /></div>
           <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Makula Scouring Powder</h4>
-            <p class="text-slate-600 mt-3 leading-8">A powerful cleaning powder used for scrubbing kitchen surfaces, sinks, utensils, bathrooms, and other hard surfaces.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Tough on dirt and stains, leaving surfaces clean and fresh.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">UGX 92,000</p>
-              <p class="mt-2">Box (24 pieces) — 500g</p>
-              <p class="mt-2 text-green-700 font-semibold">Wholesale available</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Scouring%20Powder." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
+            <div class="flex items-start justify-between gap-3"><h3 class="text-2xl font-black text-brand-navy">Makula Bleach</h3><span class="rounded-full bg-brand-gold/20 px-3 py-1 text-xs font-black text-brand-navy">Laundry</span></div>
+            <p class="mt-3 leading-7 text-slate-600">Bleach for whitening, stain removal and household hygiene. Available for white and coloured clothes.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600"><li>• 250ml, 750ml, 5L, 10L and 20L</li><li>• 250ml and 750ml packed in cartons</li><li>• Suitable for laundry, bathrooms and surfaces</li></ul>
+            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Bleach." target="_blank" class="mt-6 rounded-2xl bg-brand-green px-5 py-3 text-center font-black text-white hover:brightness-110 transition">Order on WhatsApp</a>
           </div>
-        </div>
+        </article>
 
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="white-emulsion-perfumed.jpeg" alt="Makula White Emulsion Disinfectant" class="w-full h-full object-contain" />
-          </div>
+        <article class="premium-card rounded-[2rem] bg-white ring-1 ring-slate-200 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-72 bg-gradient-to-br from-white to-slate-100 p-5 flex items-center justify-center"><img src="bar-soap.jpeg" alt="Makula Bar Soap" class="max-h-full max-w-full object-contain" /></div>
           <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Makula White Emulsion Disinfectant</h4>
-            <p class="text-slate-600 mt-3 leading-8">White Emulsion disinfectant is suitable for cleaning and disinfecting floors, both flush and pit latrine toilets, bathrooms, drains, and surfaces. Suitably used for flush toilets.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Kills germs effectively while leaving a fresh pleasant fragrance.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">Starting from UGX 70,000</p>
-              <p class="mt-2">5L — UGX 70,000</p>
-              <p>10L — UGX 140,000</p>
-              <p>20L — UGX 280,000</p>
-              <p class="mt-2 text-green-700 font-semibold">Bulk supply for institutions available</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20White%20Emulsion%20Disinfectant%20Perfumed." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
+            <div class="flex items-start justify-between gap-3"><h3 class="text-2xl font-black text-brand-navy">Makula Bar Soap</h3><span class="rounded-full bg-brand-green/10 px-3 py-1 text-xs font-black text-brand-green">Laundry</span></div>
+            <p class="mt-3 leading-7 text-slate-600">A long white laundry bar soap for washing clothes and general household cleaning.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600"><li>• Box of 10 bars</li><li>• 2 × 5 packed arrangement</li><li>• Lemon perfumed freshness</li></ul>
+            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Bar%20Soap." target="_blank" class="mt-6 rounded-2xl bg-brand-green px-5 py-3 text-center font-black text-white hover:brightness-110 transition">Order on WhatsApp</a>
           </div>
-        </div>
+        </article>
 
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="white-emulsion-non-perfumed.jpeg" alt="Makula Disinfectant Perfumed" class="w-full h-full object-contain" />
-          </div>
+        <article class="premium-card rounded-[2rem] bg-white ring-1 ring-slate-200 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-72 bg-gradient-to-br from-white to-slate-100 p-5 flex items-center justify-center"><img src="scouring-powder.jpeg" alt="Makula Scouring Powder" class="max-h-full max-w-full object-contain" /></div>
           <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Makula Disinfectant Perfumed</h4>
-            <p class="text-slate-600 mt-3 leading-8">Perfumed disinfectant ideal for environments where fragrance-free sanitation is preferred. Suitably used in pit latrines.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Strong hygiene protection without added scent.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">Starting from UGX 70,000</p>
-              <p class="mt-2">5L — UGX 70,000</p>
-              <p>10L — UGX 140,000</p>
-              <p>20L — UGX 280,000</p>
-              <p class="mt-2 text-green-700 font-semibold">Bulk supply available</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20White%20Emulsion%20Disinfectant%20Non%20Perfumed." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
+            <div class="flex items-start justify-between gap-3"><h3 class="text-2xl font-black text-brand-navy">Makula Scouring Powder</h3><span class="rounded-full bg-brand-blue/10 px-3 py-1 text-xs font-black text-brand-blue">Kitchen</span></div>
+            <p class="mt-3 leading-7 text-slate-600">A strong powder cleaner for sinks, utensils, tiles, bathrooms and hard surface scrubbing.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600"><li>• 500g bottles</li><li>• Box of 24 pieces</li><li>• Lemon perfume fragrance</li></ul>
+            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Scouring%20Powder." target="_blank" class="mt-6 rounded-2xl bg-brand-green px-5 py-3 text-center font-black text-white hover:brightness-110 transition">Order on WhatsApp</a>
           </div>
-        </div>
+        </article>
 
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="liquid-cleaner.jpeg" alt="Makula Liquid Cleaner" class="w-full h-full object-contain" />
-          </div>
+        <article class="premium-card rounded-[2rem] bg-white ring-1 ring-slate-200 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-72 bg-gradient-to-br from-white to-slate-100 p-5 flex items-center justify-center"><img src="hand-sanitizer.jpeg" alt="Makula Hand Sanitizer" class="max-h-full max-w-full object-contain" /></div>
           <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Makula Liquid Cleaner</h4>
-            <p class="text-slate-600 mt-3 leading-8">A multipurpose liquid cleaner for general use on floors, tiles, walls, bathrooms, kitchens, carpets, vehicles and workspaces.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Reliable for everyday cleaning in homes, offices, and institutions.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">Starting from UGX 10,000</p>
-              <p class="mt-2">5L — UGX 10,000</p>
-              <p>10L — UGX 20,000</p>
-              <p>20L — UGX 38,000</p>
-              <p class="mt-2 text-green-700 font-semibold">Bulk pricing available</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Liquid%20Cleaner." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
+            <div class="flex items-start justify-between gap-3"><h3 class="text-2xl font-black text-brand-navy">Makula Hand Sanitizer</h3><span class="rounded-full bg-red-50 px-3 py-1 text-xs font-black text-red-700">Hygiene</span></div>
+            <p class="mt-3 leading-7 text-slate-600">A hand hygiene solution for homes, offices, schools, clinics and commercial environments.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600"><li>• Available in 5L, 10L and 20L</li><li>• Suitable for refill stations</li><li>• Bulk supply available</li></ul>
+            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Hand%20Sanitizer." target="_blank" class="mt-6 rounded-2xl bg-brand-green px-5 py-3 text-center font-black text-white hover:brightness-110 transition">Order on WhatsApp</a>
           </div>
-        </div>
+        </article>
 
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="bleach-white.jpeg" alt="Makula Bleach Regular" class="w-full h-full object-contain" />
-          </div>
+        <article class="premium-card rounded-[2rem] bg-white ring-1 ring-slate-200 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-72 bg-gradient-to-br from-white to-slate-100 p-5 flex items-center justify-center"><img src="terramic-striper.jpeg" alt="Makula Terramic Striper" class="max-h-full max-w-full object-contain" /></div>
           <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Makula Bleach 1 (White Clothes)</h4>
-            <p class="text-slate-600 mt-3 leading-8">A bleach specially intended for whitening white fabrics and removing stains.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Keeps white clothes brighter and cleaner.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">Starting from UGX 23,000</p>
-              <p class="mt-2">5L — UGX 23,000</p>
-              <p>10L — UGX 42,500</p>
-              <p>20L — UGX 85,000</p>
-              <p class="mt-2">750ml Box (18 pcs) — UGX 89,000</p>
-              <p>250ml Box (18 pcs) — UGX 48,000</p>
-              <p class="mt-2 text-green-700 font-semibold">Boxes available for bulk buyers</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Bleach%201%20White%20Clothes." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
+            <div class="flex items-start justify-between gap-3"><h3 class="text-2xl font-black text-brand-navy">Makula Terramic Striper</h3><span class="rounded-full bg-brand-blue/10 px-3 py-1 text-xs font-black text-brand-blue">Heavy duty</span></div>
+            <p class="mt-3 leading-7 text-slate-600">A double action formula for cleaning tiles, terrazzo floors, marble floors, pavers and tough surface dirt.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600"><li>• Available in 5L, 10L and 20L</li><li>• Ideal for deep cleaning</li><li>• Suitable for commercial floors</li></ul>
+            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Terramic%20Striper." target="_blank" class="mt-6 rounded-2xl bg-brand-green px-5 py-3 text-center font-black text-white hover:brightness-110 transition">Order on WhatsApp</a>
           </div>
-        </div>
+        </article>
 
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="bleach-coloured.jpeg" alt="Makula Bleach Coloured Clothes" class="w-full h-full object-contain" />
-          </div>
+        <article class="premium-card rounded-[2rem] bg-white ring-1 ring-slate-200 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-72 bg-gradient-to-br from-white to-slate-100 p-5 flex items-center justify-center"><img src="bio-pit.jpeg" alt="Makula Bio Pit Digester" class="max-h-full max-w-full object-contain" /></div>
           <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Makula Bleach 2 (Coloured Clothes)</h4>
-            <p class="text-slate-600 mt-3 leading-8">A bleach designed for coloured clothes with attention to fabric care.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Cleans effectively while helping preserve colour.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">Starting from UGX 23,000</p>
-              <p class="mt-2">5L — UGX 23,000</p>
-              <p>10L — UGX 42,500</p>
-              <p>20L — UGX 85,000</p>
-              <p class="mt-2">750ml Box (18 pcs) — UGX 111,000</p>
-              <p>250ml Box (18 pcs) — UGX 62,500</p>
-              <p class="mt-2 text-green-700 font-semibold">Wholesale box pricing available</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Bleach%202%20Coloured%20Clothes." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
+            <div class="flex items-start justify-between gap-3"><h3 class="text-2xl font-black text-brand-navy">Makula Bio Pit Digester</h3><span class="rounded-full bg-brand-green/10 px-3 py-1 text-xs font-black text-brand-green">Sanitation</span></div>
+            <p class="mt-3 leading-7 text-slate-600">A heavy duty pit latrine digester for lowering pit latrine levels, disinfecting and reducing smell.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600"><li>• 1L bottle</li><li>• Useful for pit latrines</li><li>• Supports sanitation maintenance</li></ul>
+            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Bio%20Pit%20Digester." target="_blank" class="mt-6 rounded-2xl bg-brand-green px-5 py-3 text-center font-black text-white hover:brightness-110 transition">Order on WhatsApp</a>
           </div>
-        </div>
+        </article>
 
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="bar-soap.jpeg" alt="Makula Bar Soap" class="w-full h-full object-contain" />
-          </div>
+        <article class="premium-card rounded-[2rem] bg-white ring-1 ring-slate-200 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-72 bg-gradient-to-br from-white to-slate-100 p-5 flex items-center justify-center"><img src="dog-shampoo.jpeg" alt="Makula Super Medicated Dog Shampoo" class="max-h-full max-w-full object-contain" /></div>
           <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Makula Bar Soap</h4>
-            <p class="text-slate-600 mt-3 leading-8">A general-purpose cleaning soap for household and washing use.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Affordable and reliable for everyday cleaning needs.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">UGX 46,000</p>
-              <p class="mt-2">Box (10 pieces) — 1kg</p>
-              <p class="mt-2 text-green-700 font-semibold">Bulk orders available</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Bar%20Soap." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
+            <div class="flex items-start justify-between gap-3"><h3 class="text-2xl font-black text-brand-navy">Makula Medicated Dog Shampoo</h3><span class="rounded-full bg-brand-gold/20 px-3 py-1 text-xs font-black text-brand-navy">Pet care</span></div>
+            <p class="mt-3 leading-7 text-slate-600">A medicated shampoo for cleaning dogs, maintaining coat freshness and supporting pet hygiene.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600"><li>• 500ml bottle</li><li>• For dogs and pet care users</li><li>• Great for retail shops and supermarkets</li></ul>
+            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Medicated%20Dog%20Shampoo." target="_blank" class="mt-6 rounded-2xl bg-brand-green px-5 py-3 text-center font-black text-white hover:brightness-110 transition">Order on WhatsApp</a>
           </div>
-        </div>
+        </article>
 
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="hand-sanitizer.jpeg" alt="Makula Hand Sanitizer" class="w-full h-full object-contain" />
-          </div>
+        <article class="premium-card rounded-[2rem] bg-white ring-1 ring-slate-200 overflow-hidden shadow-soft flex flex-col">
+          <div class="h-72 bg-gradient-to-br from-white to-slate-100 p-5 flex items-center justify-center"><img src="rat-poison.jpeg" alt="Rat Poison" class="max-h-full max-w-full object-contain" /></div>
           <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Makula Hand Sanitizer</h4>
-            <p class="text-slate-600 mt-3 leading-8">A hygiene product for hand cleansing and germ protection.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Promotes cleanliness when soap and water are not available.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">Starting from UGX 75,000</p>
-              <p class="mt-2">5L — UGX 75,000</p>
-              <p class="mt-2">10L — UGX 150,000</p>
-              <p>20L — UGX 200,000</p>
-              <p class="mt-2 text-green-700 font-semibold">Bulk orders available</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Hand%20Sanitizer." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
+            <div class="flex items-start justify-between gap-3"><h3 class="text-2xl font-black text-brand-navy">Rat Poison</h3><span class="rounded-full bg-red-50 px-3 py-1 text-xs font-black text-red-700">Pest control</span></div>
+            <p class="mt-3 leading-7 text-slate-600">A ready-to-use pest control product for managing rats and mice in appropriate environments.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600"><li>• 100g packs</li><li>• For indoor and outdoor use</li><li>• Keep away from children and pets</li></ul>
+            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Rat%20Poison." target="_blank" class="mt-6 rounded-2xl bg-brand-green px-5 py-3 text-center font-black text-white hover:brightness-110 transition">Order on WhatsApp</a>
           </div>
-        </div>
-
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="terramic-striper.jpeg" alt="Makula Terramic Double Action Formula Striper" class="w-full h-full object-contain" />
-          </div>
-          <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Makula Terramic Double Action Formula Striper</h4>
-            <p class="text-slate-600 mt-3 leading-8">A strong cleaning product formulated for deep cleaning and removing tough dirt.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Ideal for heavy-duty cleaning tasks.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">Starting from UGX 70,000</p>
-              <p class="mt-2">5L — UGX 70,000</p>
-              <p>10L — UGX 140,000</p>
-              <p>20L — UGX 280,000</p>
-              <p class="mt-2 text-green-700 font-semibold">For industrial use & bulk supply</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Makula%20Terramic%20Double%20Action%20Formula%20Striper." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
-          </div>
-        </div>
-
-        <div class="relative h-full bg-white rounded-3xl border border-sky-200 shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
-          <span class="absolute top-4 left-4 z-10 bg-sky-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Top Seller</span>
-          <div class="h-72 bg-white p-4 flex items-center justify-center">
-            <img src="rat-poison.jpeg" alt="Rat Poison" class="w-full h-full object-contain" />
-          </div>
-          <div class="p-6 flex flex-col flex-1">
-            <h4 class="font-bold text-2xl text-sky-950">Rat Poison</h4>
-            <p class="text-slate-600 mt-3 leading-8">A pest control product used to manage and control rats.</p>
-            <p class="mt-4 text-slate-700"><strong>Why buy it:</strong> Helps maintain a safe and hygienic environment.</p>
-            <div class="mt-4 bg-slate-50 border border-sky-200 rounded-2xl p-4 text-sm text-slate-700">
-              <p class="text-base font-bold text-sky-950">UGX 10,000</p>
-              <p class="mt-2">Per unit</p>
-              <p class="mt-2 text-green-700 font-semibold">Bulk orders available</p>
-            </div>
-            <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20order%20Rat%20Poison." target="_blank" class="mt-5 inline-block w-full text-center px-5 py-3 rounded-2xl bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">Order Now</a>
-          </div>
-        </div>
-
+        </article>
       </div>
     </div>
   </section>
 
   <!-- Customers -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <h3 class="text-3xl md:text-4xl font-extrabold text-sky-950 tracking-tight">Customers We Serve</h3>
-        <p class="text-slate-600 mt-3">We supply institutions across various sectors such as:</p>
+  <section id="industries" class="py-20 bg-white">
+    <div class="mx-auto max-w-7xl px-5">
+      <div class="text-center max-w-3xl mx-auto">
+        <p class="text-sm font-black uppercase tracking-[.25em] text-brand-green">Who we serve</p>
+        <h2 class="mt-3 text-3xl md:text-5xl font-black tracking-tight text-brand-navy">Trusted by households, retailers and institutions.</h2>
       </div>
-      <div class="grid md:grid-cols-3 gap-5">
-        <div class="bg-slate-50 border border-sky-200 rounded-2xl p-6 shadow-sm text-center">
-          <div class="text-4xl mb-3">🏫</div>
-          <p class="font-semibold text-sky-950 text-lg">Schools</p>
-        </div>
-        <div class="bg-slate-50 border border-sky-200 rounded-2xl p-6 shadow-sm text-center">
-          <div class="text-4xl mb-3">🛒</div>
-          <p class="font-semibold text-sky-950 text-lg">Supermarkets</p>
-        </div>
-        <div class="bg-slate-50 border border-sky-200 rounded-2xl p-6 shadow-sm text-center">
-          <div class="text-4xl mb-3">🏨</div>
-          <p class="font-semibold text-sky-950 text-lg">Hotels and Hostels</p>
-        </div>
-        <div class="bg-slate-50 border border-sky-200 rounded-2xl p-6 shadow-sm text-center">
-          <div class="text-4xl mb-3">🏢</div>
-          <p class="font-semibold text-sky-950 text-lg">Offices and Businesses</p>
-        </div>
-        <div class="bg-slate-50 border border-sky-200 rounded-2xl p-6 shadow-sm text-center">
-          <div class="text-4xl mb-3">🏥</div>
-          <p class="font-semibold text-sky-950 text-lg">Hospitals and Health Facilities</p>
-        </div>
-        <div class="bg-slate-50 border border-sky-200 rounded-2xl p-6 shadow-sm text-center">
-          <div class="text-4xl mb-3">📦</div>
-          <p class="font-semibold text-sky-950 text-lg">Retail Shops and Distributors</p>
-        </div>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="rounded-3xl bg-slate-50 p-7 text-center ring-1 ring-slate-200 shadow-sm"><div class="text-4xl">🏫</div><h3 class="mt-4 font-black text-brand-navy">Schools</h3><p class="mt-2 text-slate-600">Cleaning and hygiene supply for daily facility care.</p></div>
+        <div class="rounded-3xl bg-slate-50 p-7 text-center ring-1 ring-slate-200 shadow-sm"><div class="text-4xl">🏨</div><h3 class="mt-4 font-black text-brand-navy">Hotels & Hostels</h3><p class="mt-2 text-slate-600">Bulk cleaning products for guest areas, rooms and kitchens.</p></div>
+        <div class="rounded-3xl bg-slate-50 p-7 text-center ring-1 ring-slate-200 shadow-sm"><div class="text-4xl">🏥</div><h3 class="mt-4 font-black text-brand-navy">Health Facilities</h3><p class="mt-2 text-slate-600">Hygiene, sanitation and disinfecting product supply.</p></div>
+        <div class="rounded-3xl bg-slate-50 p-7 text-center ring-1 ring-slate-200 shadow-sm"><div class="text-4xl">🛒</div><h3 class="mt-4 font-black text-brand-navy">Supermarkets</h3><p class="mt-2 text-slate-600">Retail-ready Makula products across multiple categories.</p></div>
+        <div class="rounded-3xl bg-slate-50 p-7 text-center ring-1 ring-slate-200 shadow-sm"><div class="text-4xl">🏢</div><h3 class="mt-4 font-black text-brand-navy">Offices</h3><p class="mt-2 text-slate-600">Everyday cleaners and hygiene essentials for workplaces.</p></div>
+        <div class="rounded-3xl bg-slate-50 p-7 text-center ring-1 ring-slate-200 shadow-sm"><div class="text-4xl">📦</div><h3 class="mt-4 font-black text-brand-navy">Distributors</h3><p class="mt-2 text-slate-600">Wholesale packs and cartons for resellers.</p></div>
       </div>
     </div>
   </section>
 
   <!-- Recognition -->
-  <section class="py-16 bg-slate-50 border-y border-sky-100">
-    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+  <section id="recognition" class="py-20 bg-slate-50">
+    <div class="mx-auto max-w-7xl px-5 grid lg:grid-cols-2 gap-12 items-center">
       <div>
-        <h3 class="text-3xl md:text-4xl font-extrabold text-sky-950 mb-5 tracking-tight">Recognition and Legacy</h3>
-        <p class="text-slate-600 leading-8 mb-4">
-          Crystal Chemical Products is proud of its heritage of excellence. In 2018, the Late Director,
-          <strong>Mr. Sam Mutebi</strong>, received recognition as
-          <strong>Best Exhibitor for Cottage Industry at the UMA Show Grounds</strong>,
-          in an award presented by <strong>His Excellency Yoweri Kaguta Museveni</strong>.
-        </p>
-        <p class="text-slate-600 leading-8">
-          This recognition reflects the company’s long-standing commitment to quality, local manufacturing, and excellence.
-        </p>
+        <p class="text-sm font-black uppercase tracking-[.25em] text-brand-green">Recognition</p>
+        <h2 class="mt-3 text-3xl md:text-5xl font-black tracking-tight text-brand-navy">A legacy of excellence in local manufacturing.</h2>
+        <p class="mt-5 text-lg leading-8 text-slate-600">Crystal Chemical Products is proud of its heritage. In 2018, the Late Director, Mr. Sam Mutebi, received recognition as Best Exhibitor for Cottage Industry at the UMA Show Grounds.</p>
       </div>
-      <div class="bg-white rounded-3xl p-5 border border-sky-200 shadow-xl">
-        <img src="award.jpeg" alt="Award presented to Mr. Sam Mutebi" class="w-full h-[420px] object-contain rounded-2xl bg-slate-50" />
-      </div>
+      <div class="rounded-[2rem] bg-white p-4 ring-1 ring-slate-200 shadow-soft"><img src="award.jpeg" alt="Recognition award photo" class="h-[430px] w-full rounded-[1.5rem] object-contain bg-slate-100" /></div>
     </div>
   </section>
 
-  <!-- Location -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center max-w-3xl mx-auto mb-8">
-        <h3 class="text-3xl md:text-4xl font-extrabold text-sky-950 tracking-tight">Find Us</h3>
-        <p class="text-slate-600 mt-3">📍 Salaama Road Plot No. 86 Block 263, Luwafu, Nakinyuguzi, Makindye Kampala, Uganda.</p>
-      </div>
-      <div class="rounded-3xl overflow-hidden border border-sky-200 shadow-xl bg-white">
-        <iframe src="https://www.google.com/maps?q=Salaama%20Road%20Plot%20No.%2086%20Block%20263%20Luwafu%20Nakinyuguzi%20Makindye%20Kampala%20Uganda&output=embed" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-      <div class="mt-5 text-center">
-        <a href="https://www.google.com/maps/search/?api=1&query=Salaama+Road+Plot+No.+86+Block+263+Luwafu+Nakinyuguzi+Makindye+Kampala+Uganda" target="_blank" class="inline-block px-6 py-3 rounded-2xl bg-sky-950 text-white font-semibold shadow hover:bg-sky-900">Get Directions</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact / CTA -->
-  <section class="py-16 bg-slate-100">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-10 items-center">
-        <div>
-          <h3 class="text-3xl md:text-4xl font-extrabold text-sky-950 mb-4 tracking-tight">Contact and Orders</h3>
-          <p class="text-slate-600 leading-8">
-            Looking for reliable cleaning products for your home, business, school, hotel, or institution?
-            Crystal Chemical Products is ready to serve you with trusted Makula cleaning products, bulk supply options, and dependable customer service.
-          </p>
-          <div class="mt-6 space-y-2 text-slate-700">
-            <p><strong>General Manager:</strong> Jane Nattu</p>
-            <p><strong>WhatsApp:</strong> 0772 502433</p>
-            <p><strong>Call:</strong> 0701 502433 / 0775 708891</p>
-            <p><strong>Email:</strong> sales.crystalchemicalproducts@gmail.com</p>
-            <p><strong>Address:</strong> Salaama Road Plot No. 86 Block 263, Luwafu, Nakinyuguzi, Makindye Kampala, Uganda.</p>
-          </div>
+  <!-- CTA / Contact -->
+  <section id="contact" class="py-20 bg-brand-navy text-white">
+    <div class="mx-auto max-w-7xl px-5 grid lg:grid-cols-[1fr_.9fr] gap-12 items-center">
+      <div>
+        <p class="text-sm font-black uppercase tracking-[.25em] text-brand-gold">Contact and orders</p>
+        <h2 class="mt-3 text-3xl md:text-5xl font-black tracking-tight">Need reliable cleaning products?</h2>
+        <p class="mt-5 text-lg leading-8 text-white/75">Contact Crystal Chemical Products for retail purchases, wholesale supply, institutional procurement and delivery arrangements.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="https://wa.me/256772502433?text=Hello%20Crystal%20Chemical%20Products,%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="rounded-2xl bg-brand-green px-7 py-4 text-center font-black text-white shadow-soft hover:brightness-110 transition">WhatsApp Order</a>
+          <a href="mailto:sales.crystalchemicalproducts@gmail.com?subject=Request%20for%20Quotation" class="rounded-2xl bg-white px-7 py-4 text-center font-black text-brand-navy shadow-soft hover:bg-slate-100 transition">Email for Quote</a>
         </div>
-
-        
+      </div>
+      <div class="rounded-[2rem] bg-white/10 p-7 ring-1 ring-white/15">
+        <div class="space-y-4 text-white/85">
+          <p><strong class="text-white">General Manager:</strong> Jane Nattu</p>
+          <p><strong class="text-white">WhatsApp:</strong> 0772 502433</p>
+          <p><strong class="text-white">Call:</strong> 0701 502433 / 0775 708891</p>
+          <p><strong class="text-white">Email:</strong> sales.crystalchemicalproducts@gmail.com</p>
+          <p><strong class="text-white">Address:</strong> Salaama Road Plot No. 86 Block 263, Luwafu, Nakinyuguzi, Makindye Kampala, Uganda.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer class="bg-sky-950 text-white">
-    <div class="max-w-7xl mx-auto px-6 py-6 text-sm flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-      <p>Crystal Chemical Products • Best Quality Cleaning Products You Can Trust</p>
-      <p>© 2014 Crystal Chemical Products</p>
+  <!-- Map -->
+  <section class="bg-white py-16">
+    <div class="mx-auto max-w-7xl px-5">
+      <div class="rounded-[2rem] overflow-hidden ring-1 ring-slate-200 shadow-soft">
+        <iframe src="https://www.google.com/maps?q=Salaama%20Road%20Plot%20No.%2086%20Block%20263%20Luwafu%20Nakinyuguzi%20Makindye%20Kampala%20Uganda&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 text-white">
+    <div class="mx-auto max-w-7xl px-5 py-8 flex flex-col md:flex-row justify-between gap-4 text-sm text-white/75">
+      <p>© 2025 Crystal Chemical Products. All rights reserved.</p>
+      <p>Best Quality Cleaning Products You Can Trust.</p>
     </div>
   </footer>
-
 </body>
 </html>
